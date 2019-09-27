@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 10200
 spring:
   application:
-    name: USER
+    name: BLOG
   datasource:
     url: jdbc:mysql://localhost:3306/mytestdb?serverTimezone=Asia/Shanghai
     username: root
@@ -14,11 +14,7 @@ eureka:
       defaultZone: http://localhost:1010/eureka/
     instance:
       prepreferIpAddress: true
-
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
 ribbon:
   eureka:
     enabled: true
+

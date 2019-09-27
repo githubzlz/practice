@@ -20,10 +20,25 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * 获取一个用户信息
+     * @param id
+     * @return ResultSet
+     */
     @PostMapping("getOneById/{id}")
     public ResultSet  getOneById(@PathVariable("id") Long id){
         User user = userMapper.selectById(id);
         return ResultSet.success("查询成功", user);
+    }
+
+    /**
+     * 获取一个用户信息
+     * @param id
+     * @return
+     */
+    @PostMapping("getUserInfo/{id}")
+    public User getUserInfo(@PathVariable("id") Long id){
+        return userMapper.selectById(id);
     }
 
 }
