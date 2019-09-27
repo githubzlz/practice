@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>com.zlz</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>common-server</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

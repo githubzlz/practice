@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author zhulinzhong
  * @version 1.0 createTime:2019/9/27 15:39
  */
-public class LoginUserInfo {
+public class LoginUserUtil {
 
     /**
      * 获取登陆人信息

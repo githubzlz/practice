@@ -1,7 +1,10 @@
 package com.zlz.userserver.service;
 
+import com.zlz.common.entity.PageInfo;
 import com.zlz.common.entity.user.UserInfo;
 import com.zlz.common.util.ResultSet;
+
+import java.util.List;
 
 /**
  * @author zhulinzhong
@@ -14,12 +17,28 @@ public interface UserService {
      * @param userInfo
      * @return
      */
-    ResultSet createUser(UserInfo userInfo);
+    void createUser(UserInfo userInfo);
 
     /**
      * 修改用户信息
      * @param userInfo
      * @return
      */
-    ResultSet updateUserInfo(UserInfo userInfo);
+    void updateUserInfo(UserInfo userInfo);
+
+    /**
+     * 分页查询用户信息
+     * @param pageInfo
+     * @return
+     */
+    List<UserInfo> getList(PageInfo pageInfo);
+
+    /**
+     * 获取用户，根据用户类型
+     * @param pageInfo
+     * @param type
+     * @return
+     */
+    ResultSet getListByType(PageInfo pageInfo,String type);
+
 }
