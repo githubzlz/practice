@@ -1,4 +1,4 @@
-package com.zlz.userserver.entity;
+package com.zlz.common.util;
 
 /**
  * @author zhulinzhong

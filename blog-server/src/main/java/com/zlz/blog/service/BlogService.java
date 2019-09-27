@@ -1,6 +1,6 @@
 package com.zlz.blog.service;
 
-import com.zlz.userserver.entity.User;
+import com.zlz.common.entity.user.UserInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,5 +18,5 @@ public interface BlogService {
      * @return user的信息
      */
     @PostMapping("/user/getUserInfo/{id}")
-    User getUserInfo(@PathVariable("id") Long id);
+    UserInfo getUserInfo(@PathVariable("id") Long id);
 }

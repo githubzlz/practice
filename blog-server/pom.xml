@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zlz</groupId>
-    <artifactId>blog</artifactId>
+    <artifactId>blog-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>blog</name>
@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>com.zlz</groupId>
-            <artifactId>user-server</artifactId>
+            <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

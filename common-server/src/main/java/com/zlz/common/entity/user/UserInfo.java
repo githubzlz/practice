@@ -1,4 +1,4 @@
-package com.zlz.userserver.entity;
+package com.zlz.common.entity.user;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -11,15 +11,15 @@ import java.util.Date;
  * @version 1.0 createTime:2019/9/27 10:36
  */
 @TableName("info_user")
-public class User {
+public class UserInfo {
 
     @TableId(value = "id",type = IdType.AUTO)
     private Long id;
     private String userName;
     private String password;
     private Integer gender;
-    private Integer age;
-    private String job;
+    private Integer authority;
+    private Integer isDeleted;
     private String createdUser;
     private String lastModifiedUser;
     private Date createdTime;
@@ -57,20 +57,20 @@ public class User {
         this.gender = gender;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getAuthority() {
+        return authority;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setAuthority(Integer age) {
+        this.authority = age;
     }
 
-    public String getJob() {
-        return job;
+    public Integer getIsDeleted() {
+        return isDeleted;
     }
 
-    public void setJob(String job) {
-        this.job = job;
+    public void setIsDeleted(Integer isDeleted) {
+        this.isDeleted = isDeleted;
     }
 
     public String getCreatedUser() {
@@ -107,13 +107,13 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "UserInfo{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", gender=" + gender +
-                ", age=" + age +
-                ", job='" + job + '\'' +
+                ", authority=" + authority +
+                ", isDeleted='" + isDeleted + '\'' +
                 ", createdUser='" + createdUser + '\'' +
                 ", lastModifiedUser='" + lastModifiedUser + '\'' +
                 ", createdTime=" + createdTime +

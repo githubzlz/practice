@@ -1,7 +1,7 @@
 package com.zlz.userserver.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.zlz.userserver.entity.User;
+import com.zlz.common.entity.user.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -10,5 +10,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 
 @Mapper
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper extends BaseMapper<UserInfo> {
 }

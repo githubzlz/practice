@@ -1,16 +1,13 @@
 package com.zlz.userserver.controller;
 
-import com.zlz.userserver.entity.ResultSet;
-import com.zlz.userserver.entity.User;
+import com.zlz.common.entity.user.UserInfo;
+import com.zlz.common.util.ResultSet;
 import com.zlz.userserver.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author zhulinzhong
@@ -30,7 +27,7 @@ public class UserController {
      */
     @PostMapping("getOneById/{id}")
     public ResultSet  getOneById(@PathVariable("id") Long id){
-        User user = userMapper.selectById(id);
+        UserInfo user = userMapper.selectById(id);
         return ResultSet.success("查询成功", user);
     }
 
@@ -40,7 +37,7 @@ public class UserController {
      * @return
      */
     @PostMapping("getUserInfo/{id}")
-    public User getUserInfo(@PathVariable("id") Long id){
+    public UserInfo getUserInfo(@PathVariable("id") Long id){
         return userMapper.selectById(id);
     }
 

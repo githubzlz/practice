@@ -1,7 +1,7 @@
 package com.zlz.blog.controller;
 
 import com.zlz.blog.service.BlogService;
-import com.zlz.userserver.entity.User;
+import com.zlz.common.entity.user.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,9 +20,9 @@ public class BlogController {
     private BlogService blogService;
 
     @GetMapping("/findUserInfo/{id}")
-    public User findUserInfo(@PathVariable("id") Long id){
+    public UserInfo findUserInfo(@PathVariable("id") Long id){
 
-        User user = blogService.getUserInfo(id);
+        UserInfo user = blogService.getUserInfo(id);
 
         System.err.println(user);
 
