@@ -2,7 +2,6 @@ package com.zlz.common.util;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zlz.common.entity.PageInfo;
 
 /**
  * 分页工具类

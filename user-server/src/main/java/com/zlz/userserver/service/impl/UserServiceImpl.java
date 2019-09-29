@@ -5,11 +5,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.zlz.common.constant.AuthorityConstant;
 import com.zlz.common.constant.DeleteStateConstant;
 import com.zlz.common.constant.ResultStateConstant;
-import com.zlz.common.entity.PageInfo;
+import com.zlz.common.util.PageInfo;
 import com.zlz.common.entity.user.UserInfo;
 import com.zlz.common.util.LoginUserUtil;
 import com.zlz.common.util.PageUtil;
-import com.zlz.common.util.ResultSet;
 import com.zlz.common.util.ThrowExceptionUtil;
 import com.zlz.userserver.exception.InfoNumberException;
 import com.zlz.userserver.exception.ResultRowErrorException;
@@ -41,9 +40,10 @@ public class UserServiceImpl implements UserService {
         //补全数据
         userInfo.setAuthority(AuthorityConstant.USER_NORMAL);
         userInfo.setCreatedUser(userInfo.getId().toString());
+        userInfo.setCreatedTime(new Date());
         userInfo.setLastModifiedUser(userInfo.getId().toString());
+        userInfo.setLastModifiedTime(new Date());
         userInfo.setIsDeleted(DeleteStateConstant.IS_NOT_DELETED);
-
         int row = userMapper.insert(userInfo);
         rowErrorThrowException(row);
     }

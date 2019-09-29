@@ -1,8 +1,7 @@
 package com.zlz.userserver.service;
 
-import com.zlz.common.entity.PageInfo;
+import com.zlz.common.util.PageInfo;
 import com.zlz.common.entity.user.UserInfo;
-import com.zlz.common.util.ResultSet;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
