@@ -4,6 +4,7 @@ import com.zlz.common.entity.PageInfo;
 import com.zlz.common.entity.user.UserInfo;
 import com.zlz.common.util.ResultSet;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ public interface UserService {
      * @param userInfo
      * @return
      */
-    void updateUserInfo(UserInfo userInfo);
+    void updateUserInfo(UserInfo userInfo, HttpServletRequest request);
 
     /**
      * 分页查询用户信息
@@ -39,6 +40,6 @@ public interface UserService {
      * @param type
      * @return
      */
-    ResultSet getListByType(PageInfo pageInfo,String type);
+    List<UserInfo> getListByType(PageInfo pageInfo,Integer type);
 
 }
