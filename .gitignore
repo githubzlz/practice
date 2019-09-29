@@ -5,3 +5,5 @@ target/
 .settings/
 .project
 .classpath
+src/main/resources/static/
+src/main/resources/templates/
