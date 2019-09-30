@@ -1,0 +1,16 @@
+server:
+  port: 20800
+spring:
+  application:
+    name: ZUUL
+eureka:
+  instance:
+    hostname: ZUUL
+  client:
+    service-url:
+      defaultZone: http://EUREKA-01:1010/eureka/,http://EUREKA-02:1020/eureka/,http://EUREKA-03:1030/eureka/
+zuul:
+  routes:
+    #微服务与地址的映射
+    USER: /test/**
+    BLOG: /test2/**

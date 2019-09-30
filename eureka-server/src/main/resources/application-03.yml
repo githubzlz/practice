@@ -1,0 +1,14 @@
+server:
+  port: 1030
+eureka:
+  server:
+    enable-self-preservation: true
+  instance:
+    hostname: EUREKA-03
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://EUREKA-01:1010/eureka/,http://EUREKA-02:1020/eureka/
+spring:
+  application:
+    name: EUREKA-03
