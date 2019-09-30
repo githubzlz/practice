@@ -1,0 +1,25 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: USER
+  datasource:
+    url: jdbc:mysql://localhost:3306/mytestdb?serverTimezone=Asia/Shanghai
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://EUREKA-01:1010/eureka/,http://EUREKA-02:1020/eureka/,http://EUREKA-03:1020/eureka/
+    instance:
+      prepreferIpAddress: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+ribbon:
+  eureka:
+    enabled: true
+

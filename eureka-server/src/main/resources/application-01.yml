@@ -9,6 +9,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://EUREKA-02:1020/eureka/,http://EUREKA-03:1030/eureka/
+    register-with-eureka: true
+    fetch-registry: true
 spring:
   application:
     name: EUREKA-01
