@@ -1,0 +1,14 @@
+server:
+  port: 1020
+eureka:
+  instance:
+    hostname: EUREKA-02
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://192.168.2.123:1010/eureka/,http://192.168.2.123:1030/eureka/
+spring:
+  application:
+    name: EUREKA-02
