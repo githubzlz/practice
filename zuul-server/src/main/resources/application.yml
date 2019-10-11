@@ -14,6 +14,5 @@ eureka:
     fetch-registry: true
 zuul:
   routes:
-    #微服务与地址的映射
     USER: /test/**
     BLOG: /test2/**
